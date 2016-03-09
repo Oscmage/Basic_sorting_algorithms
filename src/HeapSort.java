@@ -29,6 +29,7 @@ public class HeapSort {
 			p--;
 		}
 
+		//Since I was stupid enough to use a min heap rather than a max heap we here have to make it ascending.
 		for (int start = 0, end = arr.length-1; start< end; start++, end--) {
 			SortingHelper.swap(arr,start,end);
 		}
