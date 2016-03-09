@@ -1,10 +1,10 @@
 public class BubbleSort {
 
 	public static void main(String [] args) {
-		int [] test = {20,1,4,7,2,8,10,19,18,17};
+		int [] test = ArrayRandomize.getRandomArray();
 		bubbleSort(test);
-		for (int i = 0; i < test.length; i++){
-			System.out.println(test[i]);
+		for (int aTest : test) {
+			System.out.println(aTest);
 		}
 	}
 
@@ -13,16 +13,10 @@ public class BubbleSort {
 		while (amountOfRuns < arr.length) {
 			for (int i = 0; i < arr.length - 1; i++) {
 				if (arr[i] > arr[i+1]) {
-					swap(arr,i,i+1);
+					SortingHelper.swap(arr,i,i+1);
 				}
 			}
 			amountOfRuns++;
 		}
-	}
-
-	public static void swap(int [] arr, int i1, int i2) {
-		int temp = arr[i1];
-		arr[i1] = arr[i2];
-		arr[i2] = temp;
 	}
 }

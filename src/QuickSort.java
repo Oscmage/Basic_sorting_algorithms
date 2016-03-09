@@ -1,10 +1,10 @@
 public class QuickSort {
 
       public static void main (String [] args) {
-            int [] test = {2,1,4,7,20,8,21,10,19,18,17};
-            quickSort(test,0,test.length - 1);
-            for (int i = 0; i < test.length; i++){
-                  System.out.println(test[i]);
+            int [] test = ArrayRandomize.getRandomArray();
+            quickSort(test, 0, test.length - 1);
+            for (int aTest : test) {
+                  System.out.println(aTest);
             }
       }
 

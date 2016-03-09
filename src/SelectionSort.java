@@ -1,10 +1,10 @@
 public class SelectionSort {
 
 	public static void main(String [] args) {
-		int [] test = {20,1,4,7,2,8,10,19,18,17};
+		int [] test = ArrayRandomize.getRandomArray();
 		selectionSort(test);
-		for (int i = 0; i < test.length; i++){
-			System.out.println(test[i]);
+		for (int i : test) {
+			System.out.println(i);
 		}
 	}
 
@@ -19,13 +19,7 @@ public class SelectionSort {
 		            minPos = i;
 		        }
 		    }
-        	swap(arr, j, minPos);
+        	SortingHelper.swap(arr, j, minPos);
 		}
-	}
-
-	public static void swap(int [] arr, int i1, int i2) {
-		int temp = arr[i1];
-		arr[i1] = arr[i2];
-		arr[i2] = temp;
 	}
 }

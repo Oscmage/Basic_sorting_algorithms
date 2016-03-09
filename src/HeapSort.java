@@ -21,7 +21,7 @@ public class HeapSort {
 		int p = arr.length - 1;	
 		while (p > 0) {
 			//Swap the first element with the last
-			swap(arr,p,0);
+			SortingHelper.swap(arr,p,0);
 
 			//Pushdown the "old" last element.
 			pushDown(arr,0,p);
@@ -30,7 +30,7 @@ public class HeapSort {
 		}
 
 		for (int start = 0, end = arr.length-1; start< end; start++, end--) {
-			swap(arr,start,end);
+			SortingHelper.swap(arr,start,end);
 		}
 		
 	}
@@ -51,7 +51,7 @@ public class HeapSort {
 			}
 			// Check if the least valuable child is less worth than the element to push
 			if (arr[minPos] < arr[elementToPush]) {
-				swap(arr,elementToPush, minPos);
+				SortingHelper.swap(arr,elementToPush, minPos);
 				//Continue pushdown with the element
 				pushDown(arr,minPos,last);
 			}
@@ -65,11 +65,5 @@ public class HeapSort {
 		for (int i = arr.length - 1; i >= 0; i--) {
 			pushDown(arr, i, arr.length-1);
 		}
-	}
-
-	public static void swap(int [] arr, int i1, int i2) {
-		int temp = arr[i1];
-		arr[i1] = arr[i2];
-		arr[i2] = temp;
 	}
 }
