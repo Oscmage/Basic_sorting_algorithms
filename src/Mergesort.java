@@ -3,8 +3,8 @@ public class MergeSort {
 	public static void main (String [] args) {
 		int [] array = ArrayRandomize.getRandomArray();
 		int [] sortedArray = mergeSort(array);
-		for (int i = 0; i < sortedArray.length; i++) {
-			System.out.println(sortedArray[i]);
+		for (int aSortedArray : sortedArray) {
+			System.out.println(aSortedArray);
 		}
 	}
 
