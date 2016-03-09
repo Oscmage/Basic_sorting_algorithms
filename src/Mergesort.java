@@ -1,8 +1,7 @@
 public class MergeSort {
 
 	public static void main (String [] args) {
-		int [] array = ArrayRandomize.getRandomArray();
-		int [] sortedArray = mergeSort(array);
+		int [] sortedArray = mergeSort(ArrayRandomize.getRandomArray());
 		for (int aSortedArray : sortedArray) {
 			System.out.println(aSortedArray);
 		}

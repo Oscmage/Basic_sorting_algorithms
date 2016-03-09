@@ -1,7 +1,7 @@
 public class InsertionSort {
 
 	public static void main (String [] args) {
-		int [] test = {2,1,4,7,20,8,10,19,18,17};
+		int [] test = ArrayRandomize.getRandomArray();
 		InsertionSort(test);
 		for (int aTest : test) {
 			System.out.println(aTest);
