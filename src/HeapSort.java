@@ -1,7 +1,7 @@
 public class HeapSort {
 
 	public static void main(String [] args) {
-		int [] test = {2,1,4,7,20,8,10,19,18,17};
+		int [] test = ArrayRandomize.getRandomArray();
         heapSort(test);
 		for (int aTest : test) {
 			System.out.println(aTest);
@@ -15,9 +15,8 @@ public class HeapSort {
 		*/
 		makePOV(arr);
 		//We now have a POV tree
-		/* 
-			Then swap the element at positon 0 with the last. 
-		*/
+		
+
 		int p = arr.length - 1;	
 		while (p > 0) {
 			//Swap the first element with the last
@@ -63,7 +62,8 @@ public class HeapSort {
 		Creates a min Heap from the unsorted array.
 	*/
 	public static void makePOV(int [] arr) {
-		for (int i = arr.length - 1; i >= 0; i--) {
+		//We don't need to check the leaves.
+		for (int i = arr.length/2 - 1; i >= 0; i--) {
 			pushDown(arr, i, arr.length-1);
 		}
 	}
