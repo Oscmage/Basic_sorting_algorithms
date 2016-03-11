@@ -36,16 +36,16 @@ public class HeapSort {
 	}
 
 	public static void pushDown(int [] arr, int elementToPush, int last) {
-		//Left child at 2*i and right child at 2*i +1
-		if (elementToPush * 2 < last) {
+		//Left child at 2*i + 1 and right child at 2*i + 2
+		if ((elementToPush * 2) +1 < last) {
 			//We know have atleast a left child so get the index for that element.
-			int minPos = elementToPush * 2;
+			int minPos = elementToPush * 2 + 1;
 			
 			//Do we have a right child?
-			if ((elementToPush * 2) + 1 < last) {
+			if ((elementToPush * 2) + 2 < last) {
 				//Is the right child less worth than the left child?
-				if ((arr[(elementToPush * 2) + 1]) < arr[minPos]) {
-					minPos = elementToPush * 2 + 1;
+				if ((arr[(elementToPush * 2) + 2]) < arr[minPos]) {
+					minPos = elementToPush * 2 + 2;
 					//Make sure we swap with the right child since it's less worth
 				} 
 			}
