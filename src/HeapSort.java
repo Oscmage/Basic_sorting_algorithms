@@ -45,8 +45,8 @@ public class HeapSort {
 			if ((elementToPush * 2) + 2 < last) {
 				//Is the right child less worth than the left child?
 				if ((arr[(elementToPush * 2) + 2]) < arr[minPos]) {
+					//Make sure we change minPos with the right child's position since it's less worth
 					minPos = elementToPush * 2 + 2;
-					//Make sure we swap with the right child since it's less worth
 				} 
 			}
 			// Check if the least valuable child is less worth than the element to push
