@@ -39,14 +39,14 @@ public class QuickSort {
       }
 
       public static void quickSort(int arr[], int left, int right) {
-            int pivIdx = partition(arr, left, right);
+            int index = partition(arr, left, right);
 
-            if (left < pivIdx - 1) {
-                   quickSort(arr, left, pivIdx - 1);      
+            if (left < index - 1) {
+                   quickSort(arr, left, index - 1);
             }
             
-            if (pivIdx < right) {
-                 quickSort(arr, pivIdx, right); 
+            if (index < right) {
+                 quickSort(arr, index, right);
             }
       }
 }
